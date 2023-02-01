@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Menu from "../components/Menu";
+import { useAppContext } from "../Context";
 
 const Object = (props) => {
+  const { handleLogout } = useAppContext();
   return (
     <div>
       <div id="wrapper">
@@ -18,6 +20,11 @@ const Object = (props) => {
 
             <div class="item">
               <button class="sign-up">Đăng ký</button>
+            </div>
+            <div class="item">
+              <button class="sign-up" onClick={handleLogout}>
+                Đăng xuat
+              </button>
             </div>
           </div>
         </div>

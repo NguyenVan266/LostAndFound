@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, useNavigate } from "react-router-dom";
 import Menu from "../components/Menu";
+import { useAppContext } from "../Context";
 
 const Home = (props) => {
-  const navigate = useNavigate();
+    const { handleLogout } = useAppContext();
   return (
     <div id="wrapper">
       <div id="header">
@@ -25,6 +26,9 @@ const Home = (props) => {
           <div class="item">
             <button class="sign-up">Đăng ký</button>
           </div>
+          <div class="item">
+              <button class="sign-up" onClick={handleLogout}>Đăng xuat</button>
+            </div>
         </div>
       </div>
       <div id="banner">
