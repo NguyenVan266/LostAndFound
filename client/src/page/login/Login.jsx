@@ -6,7 +6,8 @@ import { useState } from "react";
 const Login = (props) => {
   const { handleLogin } = useAppContext();
   const [data, setData] = useState({});
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     await handleLogin(data);
   };
   return (
@@ -57,9 +58,9 @@ const Login = (props) => {
                     }}
                   />
                 </div>
-                <p onClick={handleSubmit} class="btn solid">
+                <button onClick={handleSubmit} class="btn solid">
                   Dang nhap
-                </p>
+                </button>
               </form>
 
               <form action="" class="sign-up-form">

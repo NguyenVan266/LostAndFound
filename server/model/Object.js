@@ -5,15 +5,12 @@ const ObjectSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
     },
     address: {
       type: String,
-      required: true,
     },
     img: {
       type: String,
-      // required: true
     },
     listImg: [
       {
@@ -28,7 +25,6 @@ const ObjectSchema = new mongoose.Schema(
     },
     category: {
       type: Number,
-      required: true,
       enum: [
         1, // Học liệu ( sách vở, đồ dùng học tập,...)
         2, // Đồ dùng cá nhân giá trị thấp (Áo khoác, bình nước cá nhân, …)

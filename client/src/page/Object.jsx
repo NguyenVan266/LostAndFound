@@ -196,7 +196,7 @@ const Object = (props) => {
                   <img src="/product_2.png" alt="" />
                   <div class="name">Thẻ sinh viên</div>
                   <div class="desc">Nguyễn Thị Hồng Vân</div>
-                  <div class="price">...</div>
+                  <div class="price">{process.env.PUBLIC_URL}</div>
                 </div>
 
                 <div class="item">
